@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class FolderScannerTest {
+class FolderScannerTest {
     @Test
-    public void print() {
+    void print() {
         Entry root = new FolderScanner().scan(Paths.get("D:", "test"));
         printEntry(root);
     }
-    public void printEntry(Entry entry) {
-        System.out.println(entry.getCurrent());
+    void printEntry(Entry entry) {
+        System.out.println(entry.getCurrent() + ":(" + entry.isFolder() + ")");
         List<Entry> entries = entry.getEntries();
         if (entries != null && entries.size() > 0) {
             entries.forEach(this::printEntry);

@@ -16,12 +16,14 @@ public class ScanVisitor extends SimpleFileVisitor <Path> {
     Entry root;
 
     @Builder.Default
-    Stack<Entry> entries = new Stack<>();
+    Stack<Entry> entries;
 
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
 
         FileVisitResult result = super.preVisitDirectory(dir, attrs);
+
+        // if determined should not continue, skip
         if (!FileVisitResult.CONTINUE.equals(result)) {
            return result;
         }
@@ -41,7 +43,7 @@ public class ScanVisitor extends SimpleFileVisitor <Path> {
                 }
 
                 Entry entry = entries.pop();
-                Entry self = Entry.entryBuilder().current(dir).build();
+                Entry self = Entry.entryBuilder().current(dir).isFolder(Files.isDirectory(dir)).build();
                 entry.getEntries().add(self);
                 entries.push(entry);
                 entries.push(self);

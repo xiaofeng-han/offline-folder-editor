@@ -15,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Entry {
     private Path current;
+    private boolean isFolder;
     @Builder.Default
     private List<Entry> entries = new ArrayList<>();
 

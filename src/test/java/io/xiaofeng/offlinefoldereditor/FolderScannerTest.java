@@ -10,7 +10,7 @@ import java.util.List;
 class FolderScannerTest {
     @Test
     void print() {
-        Entry root = new FolderScanner().scan(Paths.get("D:", "test"));
+        Entry root = new FolderScanner().scan(Paths.get("/Users/xiaofhan/workspace/tmp"));
         printEntry(root);
     }
     void printEntry(Entry entry) {

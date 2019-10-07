@@ -55,7 +55,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>12</release>
+                    <release>11</release>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
@@ -64,7 +64,7 @@
                         </path>
                     </annotationProcessorPaths>
 
-                    <executable>D:\dev\tools\jdk-12.0.2\bin\javac.exe</executable>
+                    <executable>C:\Users\hhhan\tools\jdk-13\bin\javac.exe</executable>
                 </configuration>
             </plugin>
         </plugins>

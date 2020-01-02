@@ -68,7 +68,6 @@
                             <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
-                    <executable>E:\dev\tools\jdk-12.0.2\bin\javac.exe</executable>
                 </configuration>
             </plugin>
         </plugins>

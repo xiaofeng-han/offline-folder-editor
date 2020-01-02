@@ -11,8 +11,8 @@ class SnapshotDeployerTest {
 
     @Test
     void tryDeploy() {
-        Entry root = new FolderScanner().scan(Paths.get("/Users/xiaofhan/workspace/tmp/data"));
-        new SnapshotDeployer().deploy(Paths.get("/Users/xiaofhan/workspace/tmp/target"), root);
+//        Entry root = new FolderScanner().scan(Paths.get("/Users/xiaofhan/workspace/tmp/data"));
+//        new SnapshotDeployer().deploy(Paths.get("/Users/xiaofhan/workspace/tmp/target"), root);
 
     }
 }

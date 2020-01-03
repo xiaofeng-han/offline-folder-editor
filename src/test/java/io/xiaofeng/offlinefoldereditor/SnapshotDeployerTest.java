@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
 
-class SnapshotDeployerTest {
+public class SnapshotDeployerTest {
 
     @Test
-    void tryDeploy() {
+    public void tryDeploy() {
 //        Entry root = new FolderScanner().scan(Paths.get("/Users/xiaofhan/workspace/tmp/data"));
 //        new SnapshotDeployer().deploy(Paths.get("/Users/xiaofhan/workspace/tmp/target"), root);
 

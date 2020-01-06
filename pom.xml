@@ -17,6 +17,7 @@
         <surefire.plugin.version>3.0.0-M4</surefire.plugin.version>
         <compiler.plugin.version>3.8.1</compiler.plugin.version>
         <jdk.version>11</jdk.version>
+        <jnotify.version>0.94</jnotify.version>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
@@ -56,6 +57,13 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>${org.mapstruct.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.contentobjects.jnotify/jnotify -->
+        <dependency>
+            <groupId>net.contentobjects.jnotify</groupId>
+            <artifactId>jnotify</artifactId>
+            <version>${jnotify.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

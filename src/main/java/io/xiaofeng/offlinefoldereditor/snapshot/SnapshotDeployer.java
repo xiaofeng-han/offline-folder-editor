@@ -31,7 +31,6 @@ public class SnapshotDeployer {
             entries.forEach(entry -> {
                 try {
                     if (entry.isFolder()) {
-
                         deploy(folder.resolve(entry.getCurrent()), entry.getEntries());
                     } else {
                         Files.createFile(folder.resolve(entry.getCurrent()));

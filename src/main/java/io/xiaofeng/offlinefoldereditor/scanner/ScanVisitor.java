@@ -20,9 +20,9 @@ public class ScanVisitor extends SimpleFileVisitor <Path> {
 
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-
+        System.out.println("preVisitDirectory: " + dir);
         FileVisitResult result = super.preVisitDirectory(dir, attrs);
-
+        System.out.println("Super result: " + result);
         // if determined should not continue, skip
         if (!FileVisitResult.CONTINUE.equals(result)) {
            return result;
@@ -34,6 +34,7 @@ public class ScanVisitor extends SimpleFileVisitor <Path> {
             result = FileVisitResult.SKIP_SUBTREE;
         }
 
+        System.out.println("After check is dir writable: " + result);
         if (FileVisitResult.CONTINUE.equals(result)) {
             if (Files.isSameFile(dir, root.getCurrent())) {
                 entries.push(root);
